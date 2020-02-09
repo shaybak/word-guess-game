@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
 
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica|Nova+Cut|Ruthie&display=swap" rel="stylesheet">
+
+  <title></title>
+</head>
+
+<body>
+
+  <section class="intro">
+
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container challenge1">
+      <h1 class="display-4 intro-text intro-text-h1">Welcome, Dovahkiin.</h1>
+      <p class="lead intro-text intro-text-paragraph">The Greybeards have set forth this final challenge for you.
+        Should you complete it, you will be known among the sentient
+        races of the world as the mightiest wielder of Thu'um the mortal
+        realms have ever known.</p>
+    </div>
+    <h2 class="intro-text intro-text-h2">Press any key to begin your challenge.</h2>
+  </div>
+
+    <div class="container">
+
+    </div>
+
+  </section>
+
+  <section class="game-section">
+    <div class="container game-interface">
+
+      <h2>Number of Victories</h2>
+      <p id="wins"></p>
+
+      <br>
+      <br>
+
+      <h2>Current Word</h2>
+      <h2 id="current-word"></h2>
+
+      <br>
+      <br>
+
+      <h2>Guesses Remaining</h2>
+      <p id="guess-left"></p>
+
+      <br>
+      <br>
+
+      <h2>Letters Already Guessed</h2>
+      <p id="user-input"></p>
+
+    </div>
+
+
+  </section>
+
+
 
 
   <script src="assets/javascript/game.js"></script>
-  </body>
+</body>
+
 </html>

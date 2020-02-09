@@ -1,0 +1,57 @@
+/* Google Font Families:
+
+font-family: 'Ruthie', cursive;
+font-family: 'IM Fell DW Pica', serif;
+font-family: 'Nova Cut', cursive; */
+
+body {
+  position: relative;
+}
+
+.jumbotron {
+  background-image: url("../images/dragonborn.png");
+  background-size: cover;
+  height: 50%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.challenge1 {
+  margin-top: 2%;
+  padding: 0 10%;
+}
+
+h1, h2, h3 {
+  font-family: 'Nova Cut', cursive;
+}
+
+.intro-text-h1 {
+  padding-bottom: 40px;
+}
+
+.intro-text-h2 {
+  padding-top: 50px;
+}
+
+p {
+  font-family: 'Ruthie', cursive;
+  font-size: 35px;
+}
+
+.intro-text {
+  color: #fff;
+}
+
+.intro-text-paragraph {
+  font-family: 'Ruthie', cursive;
+  font-size: 35px;
+}
+
+.game-section {
+  margin-top: 5%;
+  text-align: center;
+}
+
+/* .game-interaface {
+
+} */
