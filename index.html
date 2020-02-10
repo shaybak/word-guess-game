@@ -21,15 +21,14 @@
   <section class="intro">
 
     <div class="jumbotron jumbotron-fluid">
-    <div class="container challenge1">
-      <h1 class="display-4 intro-text intro-text-h1">Welcome, Dovahkiin.</h1>
-      <p class="lead intro-text intro-text-paragraph">The Greybeards have set forth this final challenge for you.
-        Should you complete it, you will be known among the sentient
-        races of the world as the mightiest wielder of Thu'um the mortal
-        realms have ever known.</p>
+      <div class="container challenge1">
+        <h1 class="display-4 intro-text intro-text-h1">Welcome, Dovahkiin.</h1>
+        <p class="lead intro-text intro-text-paragraph">The Greybeards have set forth this final challenge for you. <br>
+          Should you complete it, your name will echo throughout history as the mightiest wielder of Thu'um the mortal
+          realms have ever known.</p>
+      </div>
+      <h2 class="intro-text intro-text-h2">Press <span style="font-weight: bold; color: red;">any key</span> to begin your challenge.</h2>
     </div>
-    <h2 class="intro-text intro-text-h2">Press any key to begin your challenge.</h2>
-  </div>
 
     <div class="container">
 
@@ -37,29 +36,46 @@
 
   </section>
 
-  <section class="game-section">
-    <div class="container game-interface">
 
-      <h2>Number of Victories</h2>
-      <p id="wins"></p>
 
-      <br>
-      <br>
+  <section class="container game-section">
+    <div class="row">
+      <div class="col-lg-6 hint-container">
+        <h1 class="hint-text">Need a hint?</h1>
+        <p>The picture below will guide you.</p>
 
-      <h2>Current Word</h2>
-      <h2 id="current-word"></h2>
+        <span id="hint-image"></span>
 
-      <br>
-      <br>
+      </div>
 
-      <h2>Guesses Remaining</h2>
-      <p id="guess-left"></p>
+      <div class="col-lg-6 game-interface">
+        <div class="image-background">
+          <img src="assets/images/scroll.png" class="img-fluid" alt="">
+          <div class="image-text-overlay">
 
-      <br>
-      <br>
+            <h2 class="scroll-text">Number of Victories</h2>
+            <p class="p-user-display" id="wins">0</p>
 
-      <h2>Letters Already Guessed</h2>
-      <p id="user-input"></p>
+
+            <br>
+
+            <h2 class="scroll-text">Current Word</h2>
+            <h2 class="h2-user-display" id="current-word"></h2>
+
+            <br>
+            <br>
+
+            <h2 class="scroll-text">Guesses Remaining</h2>
+            <p class="p-user-display" id="guesses-left">10</p>
+
+            <br>
+
+            <h2 class="scroll-text">Letters Already Guessed</h2>
+            <p class="p-user-display" id="user-input">Your guesses will appear here.</p>
+          </div>
+        </div>
+      </div>
+
 
     </div>
 

@@ -3,13 +3,12 @@
 font-family: 'Ruthie', cursive;
 font-family: 'IM Fell DW Pica', serif;
 font-family: 'Nova Cut', cursive; */
-
 body {
   position: relative;
 }
 
 .jumbotron {
-  background-image: url("../images/dragonborn.png");
+  background-image: url("../images/dovahkiin.png");
   background-size: cover;
   height: 50%;
   text-align: center;
@@ -48,10 +47,101 @@ p {
 }
 
 .game-section {
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: center;
+  height: 50%;
+  position: relative;
 }
 
-/* .game-interaface {
+.image-background {
+  position: relative;
+}
 
-} */
+.image-text-overlay {
+  position: absolute;
+  bottom: 7%;
+  left: 15%;
+}
+
+.p-user-display {
+  color: darkred;
+}
+
+.h2-user-display {
+  color: darkred;
+}
+
+.hint-text {
+  color: darkred;
+  font-size: 3.5rem;
+  margin-top: 6%;
+}
+
+.hint-image {
+  border-radius: 100%;
+  width: 80%;
+  margin-top: 3%;
+}
+
+/* ***********************************************
+MEDIA QUERIES
+*********************************************** */
+@media screen and (max-width: 1200px) {
+  .image-text-overlay {
+    position: absolute;
+    width: 80%;
+    padding-right: 8%;
+  }
+
+  .scroll-text {
+    font-size: 25px;
+  }
+
+  .h2-user-display {
+    font-size: 25px;
+  }
+
+  .p-user-display {
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 990px) {
+    .image-text-overlay {
+      position: absolute;
+      width: 80%;
+      padding-right: 8%;
+      padding-bottom: 10%;
+    }
+
+    .scroll-text {
+      font-size: 2em;
+    }
+
+    .h2-user-display {
+      font-size: 2em;
+    }
+
+    .p-user-display {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .image-text-overlay {
+        position: absolute;
+        width: 80%;
+        padding-right: 8%;
+        padding-bottom: 10%;
+      }
+
+      .scroll-text {
+        font-size: 1.5rem;
+      }
+
+      .h2-user-display {
+        font-size: 1.5rem;
+      }
+
+      .p-user-display {
+        font-size: 30px;
+      }
+    }
