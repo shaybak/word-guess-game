@@ -9,16 +9,44 @@ var numOfGuesses = 0;
 var userInput = document.getElementById("user-input");
 var guessesArray = [];
 
-  // Next, we give JavaScript a function to execute when onkeyup event fires.
-  for (var i = 0; i <= 10; i++) {
-  document.onkeyup = function(event) {
-    userInput = event.key;
+var currentWord = getWord();
+console.log(currentWord + " -- Global current word test");
+
+var currentWordArray = displayWordSpaces(currentWord);
+
+document.onkeyup = function(event) {
+  userInput = event.key;
+  console.log(userInput);
+
+  if (currentWord.indexOf(userInput) > -1) {
+    var i = currentWord.indexOf(userInput);
+    currentWordArray[i] = userInput;
+    console.log(currentWordArray[i] + " --testing currentWordArray after addition");
+    console.log(currentWordArray + " --testing currentWordArray after addition")
+    document.getElementById('current-word').textContent = currentWordArray.join("");
     guessesArray.push(userInput);
     document.getElementById("user-input").textContent = guessesArray.join(" ");
     guessesLeft--;
     document.getElementById('guesses-left').textContent = guessesLeft;
-  };
-}
+  } else {
+    guessesArray.push(userInput);
+    document.getElementById("user-input").textContent = guessesArray.join(" ");
+    guessesLeft--;
+    document.getElementById('guesses-left').textContent = guessesLeft;
+  }
+
+
+
+
+
+
+};
+
+
+
+
+
+// }
 
 
 
@@ -27,7 +55,7 @@ var guessesArray = [];
 
 
 
- // }
+// }
 
 // ********************************************
 // This will generate a random word for the game, but we want to go in order to avoid repeats
@@ -93,6 +121,8 @@ function displayWordSpaces(x) {
   } else if (displayWord === "lydia") {
     document.getElementById("hint-image").innerHTML = '<img src="assets/images/lydia.png" class="hint-image" alt="">';
   }
+
+    return spaceArray;
 
 }
 
