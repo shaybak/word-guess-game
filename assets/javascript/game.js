@@ -6,19 +6,27 @@ var wordOptions = ["dragonborn", "spriggan", "sweetrolls", "knee", "dragon", "da
 var guessesLeft = 10;
 var wins = 0;
 var numOfGuesses = 0;
-
-// function getGuess(event) {
-  var userInput = document.getElementById("user-input");
-
-  var guessesArray = [];
+var userInput = document.getElementById("user-input");
+var guessesArray = [];
 
   // Next, we give JavaScript a function to execute when onkeyup event fires.
-  // for (var i = 0; i <= 10; i++) {
+  for (var i = 0; i <= 10; i++) {
   document.onkeyup = function(event) {
     userInput = event.key;
     guessesArray.push(userInput);
     document.getElementById("user-input").textContent = guessesArray.join(" ");
+    guessesLeft--;
+    document.getElementById('guesses-left').textContent = guessesLeft;
   };
+}
+
+
+
+
+
+
+
+
  // }
 
 // ********************************************
