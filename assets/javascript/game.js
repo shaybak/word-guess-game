@@ -1,29 +1,40 @@
 // Here are our Skyrim-themed word options for the game:
 var wordOptions = ["dragonborn", "spriggan", "sweetrolls", "knee", "dragon", "daedra", "vampire", "dog", "map", "mage", "talos", "lydia"];
 
+// Here we set global variables for the things we're tracking:
+
+var guessesLeft = 10;
+var wins = 0;
+var numOfGuesses = 0;
+
+// function getGuess(event) {
+  var userInput = document.getElementById("user-input");
+
+  var guessesArray = [];
+
+  // Next, we give JavaScript a function to execute when onkeyup event fires.
+  // for (var i = 0; i <= 10; i++) {
+  document.onkeyup = function(event) {
+    userInput = event.key;
+    guessesArray.push(userInput);
+    document.getElementById("user-input").textContent = guessesArray.join(" ");
+  };
+ // }
+
 // ********************************************
 // This will generate a random word for the game, but we want to go in order to avoid repeats
 // ********************************************
 
 // This is where we'll select a word for the current game session:
 function getWord() {
+
+  // Define empty array for words already used
+
   var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+
   console.log(randomWord);
   return randomWord;
 }
-
-
-// ********************************************
-// NEED TO FIX: I want to loop through the wordOptions array but this terminates after one loop
-// the way it's currently written
-// ********************************************
-// function getWord() {
-//   for (var i = 0; i < wordOptions.length; i++) {
-//     var currentWord = wordOptions[i];
-//     console.log(currentWord);
-//     return currentWord;
-//   }
-// }
 
 // Once we have our word, we'll run this function to convert it to blank spaces
 function displayWordSpaces(x) {
@@ -77,6 +88,64 @@ function displayWordSpaces(x) {
 
 }
 
+// function playGame() {
+//   var currentWord = getWord();
+//   displayWordSpaces(currentWord);
+//   // eliminateDuplicates(currentWord);
+//   // getUserKey();
+// }
+//
+//
+// // }
+//
+// function countTries() {
+
+
+
+
+
+// ********************************************
+// NEED TO FIX: I want to loop through the wordOptions array but this terminates after one loop
+// the way it's currently written
+// ********************************************
+// function getWord() {
+//   for (var i = 0; i < wordOptions.length; i++) {
+//     var currentWord = wordOptions[i];
+//     console.log(currentWord);
+//     return currentWord;
+//   }
+// }
+//
+// function gameLoop();
+
+// function eliminateDuplicates(x) {
+//     var randomWord = x;
+//     if (wordOptions.includes(randomWord)) {
+//       wordOptions.pop(randomWord);
+//     }
+// }
+//
+// function getUserKey() {
+//
+//   // Assign variable to corresponding id
+//   var userGuess = document.getElementById("user-input");
+//
+//   var listOfGuesses = [];
+//
+//   // Function
+//   document.onkeyup = function(event) {
+//     userGuess = event.key;
+//   };
+//
+//   // Add userGuess to guesses array
+//   listOfGuesses.push(userGuess);
+//   document.getElementById("user-input").innerText = listOfGuesses.join("");
+//
+// }
+
+
+
+// playGame();
 
 
 
@@ -99,5 +168,3 @@ function displayWordSpaces(x) {
 
 
 //Run functions
-var currentWord = getWord();
-displayWordSpaces(currentWord);

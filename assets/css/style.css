@@ -34,8 +34,8 @@ h1, h2, h3 {
 }
 
 p {
-  font-family: 'Ruthie', cursive;
-  font-size: 35px;
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-size: 37px;
 }
 
 .intro-text {
@@ -43,8 +43,8 @@ p {
 }
 
 .intro-text-paragraph {
-  font-family: 'Ruthie', cursive;
-  font-size: 35px;
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-size: 30px;
 }
 
 .game-section {
@@ -66,6 +66,7 @@ p {
 
 .p-user-display {
   color: darkred;
+  font-size: 1.9rem;
 }
 
 .h2-user-display {
@@ -82,6 +83,18 @@ p {
   border-radius: 100%;
   width: 80%;
   margin-top: 3%;
+}
+
+.decor-img1 {
+  width: 5%;
+  position: absolute;
+  right: 40px;
+}
+
+.decor-img2 {
+  width: 5%;
+  position: absolute;
+  left: 20px;
 }
 
 /* ***********************************************
