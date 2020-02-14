@@ -170,4 +170,11 @@ var comparativeArray = Array.from(currentWord);
     var userInput = document.getElementById("user-input");
     var guessesArray = [];
     var currentWordArray = [];
+    var currentWord = getWord();
+
+    // Create user array--this array will be filled with underscores, but will gradually fill with userInput key
+    currentWordArray = displayWordSpaces(currentWord);
+
+    // Create comparative array from current word so we can compare to user-built array
+    var comparativeArray = Array.from(currentWord);
   }
